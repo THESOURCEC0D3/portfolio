@@ -10,7 +10,7 @@ export default function Hero() {
           alt="Shutter Studios — Nigerian wedding photography"
           fill
           priority
-          className="object-cover object-[70%_center] md:object-center"
+          className="object-cover object-[67%_center] md:object-center"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,5,5,0.4)] via-[rgba(5,5,5,0.2)] to-[rgba(5,5,5,0.7)]" />
