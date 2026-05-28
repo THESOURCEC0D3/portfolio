@@ -10,7 +10,7 @@ export default function Hero() {
           alt="Shutter Studios — Nigerian wedding photography"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[70%_center] md:object-center"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,5,5,0.4)] via-[rgba(5,5,5,0.2)] to-[rgba(5,5,5,0.7)]" />
@@ -28,7 +28,8 @@ export default function Hero() {
             </h1>
 
             <p className="text-[var(--color-cream)] text-base md:text-lg max-w-md mb-10 leading-relaxed">
-              A Port Harcourt photography studio. Weddings, portraits, and brand work across Nigeria.
+              A Port Harcourt photography studio. Weddings, portraits, and brand
+              work across Nigeria.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -47,7 +48,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        </div>
-      </section>
+      </div>
+    </section>
   );
 }
