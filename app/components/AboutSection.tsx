@@ -22,7 +22,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="bg-[var(--color-pf-dark-elevated)] py-24 md:py-32 px-6 md:px-10"
+      className="bg-[var(--color-pf-dark-elevated)] py-24 md:py-26 px-6 md:px-10"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 mb-20">

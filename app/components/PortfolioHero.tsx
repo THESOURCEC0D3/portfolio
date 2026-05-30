@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function PortfolioHero() {
   return (
-    <section className="min-h-screen bg-[var(--color-pf-dark)] flex items-center px-6 md:px-10 pt-28 pb-16">
+    <section className="min-h-screen bg-[var(--color-pf-dark)] flex items-center px-6 md:px-10 pt-24 pb-16">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="order-2 md:order-1">

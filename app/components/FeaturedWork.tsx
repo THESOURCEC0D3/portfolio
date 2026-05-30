@@ -5,7 +5,7 @@ export default function FeaturedWork() {
   return (
     <section
       id="work"
-      className="bg-[var(--color-pf-dark)] py-24 md:py-32 px-6 md:px-10 border-t border-[var(--color-pf-cream)]/10"
+      className="bg-[var(--color-pf-dark)] py-24 md:py-26 px-6 md:px-10 border-t border-[var(--color-pf-cream)]/10"
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 md:mb-20 max-w-2xl">
