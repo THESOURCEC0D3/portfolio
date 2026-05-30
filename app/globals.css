@@ -1,19 +1,31 @@
 @import "tailwindcss";
 
 :root {
+  /* Shutter Studios palette (warm) */
   --color-dark: #050505;
   --color-cream: #f5f0e8;
   --color-muted: #c9c3b8;
   --color-gold: #d4b57b;
   --color-dark-elevated: #141414;
-}
 
+  /* Portfolio palette (neutral + orange) */
+  --color-pf-dark: #0a0a0a;
+  --color-pf-dark-elevated: #161616;
+  --color-pf-cream: #f5f0e8;
+  --color-pf-muted: #a8a8a8;
+  --color-pf-orange: #e8643c;
+}
 @theme inline {
   --color-dark: var(--color-dark);
   --color-cream: var(--color-cream);
   --color-muted: var(--color-muted);
   --color-gold: var(--color-gold);
   --color-dark-elevated: var(--color-dark-elevated);
+  --color-pf-dark: var(--color-pf-dark);
+  --color-pf-dark-elevated: var(--color-pf-dark-elevated);
+  --color-pf-cream: var(--color-pf-cream);
+  --color-pf-muted: var(--color-pf-muted);
+  --color-pf-orange: var(--color-pf-orange);
   --font-serif: var(--font-fraunces);
   --font-sans: var(--font-ibm-plex-sans);
   --font-mono: var(--font-jetbrains-mono);
@@ -23,6 +35,10 @@ body {
   background-color: var(--color-dark);
   color: var(--color-cream);
   font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .font-serif {
