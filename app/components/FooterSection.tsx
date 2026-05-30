@@ -7,12 +7,12 @@ export default function PortfolioFooter() {
     <footer className="bg-gradient-to-b from-[#1a1a1a] to-[var(--color-pf-dark)] border-t border-[var(--color-pf-cream)]/10">
       <div className="max-w-7xl mx-auto px-5 md:px-10 pt-24 md:pt-32 pb-10 ">
         <div className="mb-20 md:mb-24">
-          <h2 className="font-serif text-6xl md:text-9xl lg:text-[12rem] text-[var(--color-pf-orange)] leading-[0.9] tracking-tight uppercase">
+          <h2 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] xl:text-[12rem] text-[var(--color-pf-orange)] leading-[0.9] tracking-tight uppercase wrap-break-word">
             Jonathan
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-16 pb-16 border-b border-[var(--color-pf-cream)]/10 border">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-16 pb-16 border-b border-[var(--color-pf-cream)]/10">
           <div>
             <p className="font-mono text-xs text-[var(--color-pf-muted)] mb-4">
               Navigate
