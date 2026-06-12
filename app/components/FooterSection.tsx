@@ -60,7 +60,7 @@ export default function PortfolioFooter() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://instagram.com/your_ig_handle"
+                  href="https://instagram.com/jonathanprecious.dev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors"

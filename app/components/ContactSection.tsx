@@ -39,7 +39,7 @@ export default function ContactSection() {
           </a>
 
             <a
-         href="mailto:hello@jonathanprecious.com.ng"
+         href="mailto:jonathantamunoiduari@gmail.com"
             className="group block p-8 md:p-10 rounded-2xl border border-[var(--color-pf-cream)]/20 text-[var(--color-pf-cream)] hover:border-[var(--color-pf-cream)]/40 transition-colors"
           >
             <p className="font-mono text-xs text-[var(--color-pf-muted)] mb-3">
