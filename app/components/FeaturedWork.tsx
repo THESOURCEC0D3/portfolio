@@ -19,6 +19,72 @@ export default function FeaturedWork() {
 
         <div className="space-y-24 md:space-y-32">
           <div className="group">
+            <a
+              href="https://haven-shortlets.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative rounded-xl overflow-hidden border border-[var(--color-pf-cream)]/10 bg-[var(--color-pf-dark-elevated)]"
+            >
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-pf-cream)]/10">
+                <span className="w-3 h-3 rounded-full bg-[var(--color-pf-cream)]/20" />
+                <span className="w-3 h-3 rounded-full bg-[var(--color-pf-cream)]/20" />
+                <span className="w-3 h-3 rounded-full bg-[var(--color-pf-cream)]/20" />
+                <span className="font-mono text-[10px] text-[var(--color-pf-muted)] ml-4">
+                  haven-shortlets.vercel.app
+                </span>
+              </div>
+
+              <div className="relative aspect-[16/10] w-full overflow-hidden">
+                <Image
+                  src="/images/haven-shortlets-preview.jpg"
+                  alt="Haven Shortlets — your trusted shortlet company"
+                  fill
+                  className="object-contain group-hover:scale-[1.02] transition-transform duration-700"
+                  sizes="100vw"
+                />
+              </div>
+            </a>
+
+            <div className="grid md:grid-cols-3 gap-8 md:gap-12 mt-10">
+              <div className="md:col-span-2">
+                <h3 className="font-serif text-2xl md:text-3xl text-[var(--color-pf-cream)] mb-4">
+                  Haven Shortlets
+                </h3>
+                <p className="text-[var(--color-pf-muted)] text-base md:text-lg leading-relaxed mb-6">
+                  A short-let apartment booking platform serving Port Harcourt,
+                  offering verified, reliable accommodations for visiting
+                  professionals and travelers. Guests can browse listings and
+                  book directly through the site.
+                </p>
+                <a
+                  href="https://haven-shortlets.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs text-[var(--color-pf-orange)] border-b border-[var(--color-pf-orange)] pb-1 hover:text-[var(--color-pf-cream)] hover:border-[var(--color-pf-cream)] transition-colors"
+                >
+                  View the live site →
+                </a>
+              </div>
+
+              <div>
+                <p className="font-mono text-xs text-[var(--color-pf-muted)] mb-4">
+                  Built with
+                </p>
+                <ul className="space-y-2">
+                  {["Next.js", "TypeScript", "Tailwind CSS", "Vercel"].map((tech) => (
+                    <li
+                      key={tech}
+                      className="font-mono text-xs text-[var(--color-pf-cream)]"
+                    >
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="group">
             <Link
               href="/work/shutter-studios"
               className="block relative rounded-xl overflow-hidden border border-[var(--color-pf-cream)]/10 bg-[var(--color-pf-dark-elevated)]"
