@@ -19,7 +19,7 @@ const projects: Project[] = [
     name: "NAYA",
     href: "https://naya-care.vercel.app/",
     displayUrl: "naya-care.vercel.app",
-    image: "/images/naya-preview.png",
+    image: "/images/naya-preview1.png",
     alt: "NAYA — personal-care storefront",
     imageFit: "contain",
     description:
