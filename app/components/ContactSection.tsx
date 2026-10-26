@@ -38,7 +38,7 @@ export default function ContactSection() {
         >
           <StaggerItem y={24}>
             <a
-              href="https://wa.me/2348000000000"
+              href="https://wa.me/2348065429005"
               target="_blank"
               rel="noopener noreferrer"
               className="group block p-8 md:p-10 rounded-2xl bg-pf-orange text-pf-dark hover:bg-pf-cream transition duration-400 ease-editorial motion-safe:hover:-translate-y-1"
