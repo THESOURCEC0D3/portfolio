@@ -13,10 +13,6 @@ export const DIST = { sm: 12, md: 24, lg: 40 } as const;
 // Seconds between siblings
 export const STAGGER = { tight: 0.05, base: 0.08, loose: 0.12 } as const;
 
-// Animate once, when 20% of the element is visible and it is 10% above the
-// bottom edge of the screen
-export const VIEWPORT = {
-  once: true,
-  amount: 0.2,
-  margin: "0px 0px -10% 0px",
-} as const;
+// Animate once, when 20% of the element is visible. No shrunken bottom
+// margin: content at the very end of the page could never scroll past it.
+export const VIEWPORT = { once: true, amount: 0.2 } as const;

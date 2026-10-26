@@ -1,3 +1,8 @@
+import Reveal from "./motion/Reveal";
+import RevealText from "./motion/RevealText";
+import Stagger, { DrawLine, StaggerItem } from "./motion/Stagger";
+import { STAGGER } from "./motion/tokens";
+
 const services = [
   {
     title: "Business Websites",
@@ -22,66 +27,79 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="bg-[var(--color-pf-dark-elevated)] py-24 md:py-26 px-6 md:px-10"
+      className="bg-pf-dark-elevated py-24 md:py-26 px-6 md:px-10"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 mb-20">
           <div>
-            <p className="font-mono text-xs text-[var(--color-pf-orange)] mb-6">
-              About
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[var(--color-pf-cream)] leading-[1.1] tracking-tight">
-              A developer who actually <span className="italic">cares</span> how
-              it turns out.
-            </h2>
+            <Reveal y={12}>
+              <p className="font-mono text-xs text-pf-orange mb-6">About</p>
+            </Reveal>
+            <RevealText
+              segments={[
+                "A developer who actually",
+                { text: "cares", italic: true },
+                "how it turns out.",
+              ]}
+              className="font-serif text-4xl md:text-5xl lg:text-6xl text-pf-cream leading-[1.1] tracking-tight"
+            />
           </div>
 
           <div className="flex flex-col justify-center">
-            <p className="text-[var(--color-pf-muted)] text-base md:text-lg leading-relaxed mb-6">
-              I'm Jonathan, a web developer based in Port Harcourt. I build
-              modern, fast websites for businesses across Nigeria — the kind of
-              sites that make a business look as serious online as it is in
-              person.
-            </p>
-            <p className="text-[var(--color-pf-muted)] text-base md:text-lg leading-relaxed">
-              I care about the details most developers skip: how fast a page
-              loads on mobile data, how easy it is for a customer to reach you,
-              and whether the whole thing actually looks good. Every project I
-              take on, I build like it's my own.
-            </p>
+            <Reveal delay={0.1}>
+              <p className="text-pf-muted text-base md:text-lg leading-relaxed mb-6">
+                I&apos;m Jonathan, a web developer based in Port Harcourt. I
+                build modern, fast websites for businesses across Nigeria — the
+                kind of sites that make a business look as serious online as it
+                is in person.
+              </p>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <p className="text-pf-muted text-base md:text-lg leading-relaxed">
+                I care about the details most developers skip: how fast a page
+                loads on mobile data, how easy it is for a customer to reach
+                you, and whether the whole thing actually looks good. Every
+                project I take on, I build like it&apos;s my own.
+              </p>
+            </Reveal>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-20">
+        <Stagger
+          stagger={STAGGER.loose}
+          className="grid md:grid-cols-3 gap-8 md:gap-12 mb-20"
+        >
           {services.map((service) => (
-            <div
-              key={service.title}
-              className="border-t border-[var(--color-pf-cream)]/20 pt-6"
-            >
-              <h3 className="font-serif text-xl md:text-2xl text-[var(--color-pf-cream)] mb-3">
+            <StaggerItem key={service.title} className="relative pt-6">
+              <DrawLine className="bg-pf-cream/20" />
+              <h3 className="font-serif text-xl md:text-2xl text-pf-cream mb-3">
                 {service.title}
               </h3>
-              <p className="text-[var(--color-pf-muted)] text-sm md:text-base leading-relaxed">
+              <p className="text-pf-muted text-sm md:text-base leading-relaxed">
                 {service.description}
               </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
         <div>
-          <p className="font-mono text-xs text-[var(--color-pf-muted)] mb-5">
-            Tools I build with
-          </p>
-          <div className="flex flex-wrap gap-3">
+          <Reveal y={12}>
+            <p className="font-mono text-xs text-pf-muted mb-5">
+              Tools I build with
+            </p>
+          </Reveal>
+          <Stagger stagger={STAGGER.tight} className="flex flex-wrap gap-3">
             {stack.map((tech) => (
-              <span
+              <StaggerItem
                 key={tech}
-                className="font-mono text-xs text-[var(--color-pf-cream)] border border-[var(--color-pf-cream)]/20 rounded-full px-4 py-2"
+                as="span"
+                y={8}
+                className="font-mono text-xs text-pf-cream border border-pf-cream/20 rounded-full px-4 py-2"
               >
                 {tech}
-              </span>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </div>
     </section>
