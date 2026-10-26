@@ -14,6 +14,12 @@
   --color-pf-cream: #f5f0e8;
   --color-pf-muted: #a8a8a8;
   --color-pf-orange: #e8643c;
+
+  /* Portfolio motion (mirrors app/components/motion/tokens.ts) */
+  --pf-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --pf-dur-base: 600ms;
+  --pf-dur-slow: 900ms;
+  --pf-dur-settle: 1400ms;
 }
 @theme inline {
   --color-dark: var(--color-dark);
@@ -29,6 +35,7 @@
   --font-serif: var(--font-fraunces);
   --font-sans: var(--font-ibm-plex-sans);
   --font-mono: var(--font-jetbrains-mono);
+  --ease-editorial: var(--pf-ease);
 }
 
 body {
@@ -49,4 +56,57 @@ html {
   font-family: var(--font-jetbrains-mono);
   letter-spacing: 0.18em;
   text-transform: uppercase;
+}
+
+/* Portfolio intro animations (pf- prefix keeps them out of Shutter Studios).
+   Only `from` is declared, so each element animates to its normal styles. */
+@keyframes pf-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes pf-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@keyframes pf-rise-mask {
+  from {
+    transform: translateY(105%);
+  }
+}
+
+@keyframes pf-settle {
+  from {
+    transform: scale(1.06);
+  }
+}
+
+.pf-intro-fade {
+  animation: pf-fade var(--pf-dur-base) var(--pf-ease) both;
+}
+
+.pf-intro-rise {
+  animation: pf-rise var(--pf-dur-base) var(--pf-ease) both;
+}
+
+.pf-intro-mask {
+  animation: pf-rise-mask var(--pf-dur-slow) var(--pf-ease) both;
+}
+
+.pf-intro-settle {
+  animation: pf-settle var(--pf-dur-settle) var(--pf-ease) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [class*="pf-intro"] {
+    animation: none !important;
+  }
 }

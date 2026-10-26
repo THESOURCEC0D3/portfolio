@@ -27,14 +27,14 @@ export default function PortfolioNavigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-mono text-xs text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors"
+                className="font-mono text-xs text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors duration-300 ease-editorial"
               >
                 {link.label}
               </Link>
             ))}
             <Link
               href="#contact"
-              className="font-mono text-xs px-5 py-2.5 bg-[var(--color-pf-orange)] text-[var(--color-pf-dark)] rounded-full hover:bg-[var(--color-pf-cream)] transition-colors"
+              className="font-mono text-xs px-5 py-2.5 bg-[var(--color-pf-orange)] text-[var(--color-pf-dark)] rounded-full hover:bg-[var(--color-pf-cream)] transition duration-300 ease-editorial motion-safe:hover:-translate-y-px"
             >
               Contact
             </Link>

@@ -25,7 +25,7 @@ export default function ContactSection() {
             href="https://wa.me/2348000000000"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block p-8 md:p-10 rounded-2xl bg-[var(--color-pf-orange)] text-[var(--color-pf-dark)] hover:bg-[var(--color-pf-cream)] transition-colors"
+            className="group block p-8 md:p-10 rounded-2xl bg-[var(--color-pf-orange)] text-[var(--color-pf-dark)] hover:bg-[var(--color-pf-cream)] transition duration-400 ease-editorial motion-safe:hover:-translate-y-1"
           >
             <p className="font-mono text-xs mb-3 opacity-70">
               Preferred
@@ -34,13 +34,16 @@ export default function ContactSection() {
               Message on WhatsApp
             </h3>
             <p className="font-mono text-xs opacity-70">
-              Tap to open chat →
+              Tap to open chat{" "}
+              <span className="inline-block transition-transform duration-300 ease-editorial motion-safe:group-hover:translate-x-1">
+                →
+              </span>
             </p>
           </a>
 
             <a
          href="mailto:jonathantamunoiduari@gmail.com"
-            className="group block p-8 md:p-10 rounded-2xl border border-[var(--color-pf-cream)]/20 text-[var(--color-pf-cream)] hover:border-[var(--color-pf-cream)]/40 transition-colors"
+            className="group block p-8 md:p-10 rounded-2xl border border-[var(--color-pf-cream)]/20 text-[var(--color-pf-cream)] hover:border-[var(--color-pf-cream)]/40 transition duration-400 ease-editorial motion-safe:hover:-translate-y-1"
           >
             <p className="font-mono text-xs text-[var(--color-pf-muted)] mb-3">
               Or by email
@@ -49,7 +52,10 @@ export default function ContactSection() {
               Send a message
             </h3>
             <p className="font-mono text-xs text-[var(--color-pf-muted)] break-all">
-              jonathantamunoiduari@gmail.com →
+              jonathantamunoiduari@gmail.com{" "}
+              <span className="inline-block transition-transform duration-300 ease-editorial motion-safe:group-hover:translate-x-1">
+                →
+              </span>
             </p>
           </a>
         </div>

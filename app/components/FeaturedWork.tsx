@@ -113,7 +113,7 @@ export default function FeaturedWork() {
             <div key={project.name} className="group">
               <ProjectLink
                 href={project.href}
-                className="block relative rounded-xl overflow-hidden border border-pf-cream/10 bg-pf-dark-elevated"
+                className="block relative rounded-xl overflow-hidden border border-pf-cream/10 bg-pf-dark-elevated transition-colors duration-700 ease-editorial hover:border-pf-cream/25"
               >
                 <div className="flex items-center gap-2 px-4 py-3 border-b border-pf-cream/10">
                   <span className="w-3 h-3 rounded-full bg-pf-cream/20" />
@@ -133,7 +133,7 @@ export default function FeaturedWork() {
                       project.imageFit === "cover"
                         ? "object-cover object-top"
                         : "object-contain"
-                    } group-hover:scale-[1.02] transition-transform duration-700`}
+                    } motion-safe:group-hover:scale-[1.02] transition-transform duration-700 ease-editorial`}
                     sizes="100vw"
                   />
                 </div>
@@ -149,9 +149,12 @@ export default function FeaturedWork() {
                   </p>
                   <ProjectLink
                     href={project.href}
-                    className="font-mono text-xs text-pf-orange border-b border-pf-orange pb-1 hover:text-pf-cream hover:border-pf-cream transition-colors"
+                    className="group/link font-mono text-xs text-pf-orange border-b border-pf-orange pb-1 hover:text-pf-cream hover:border-pf-cream transition-colors duration-300 ease-editorial"
                   >
-                    View the live site →
+                    View the live site{" "}
+                    <span className="inline-block transition-transform duration-300 ease-editorial motion-safe:group-hover/link:translate-x-1">
+                      →
+                    </span>
                   </ProjectLink>
                 </div>
 

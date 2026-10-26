@@ -21,7 +21,7 @@ export default function PortfolioFooter() {
               <li>
                 <Link
                   href="#work"
-                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors"
+                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors duration-300 ease-editorial"
                 >
                   Work
                 </Link>
@@ -29,7 +29,7 @@ export default function PortfolioFooter() {
               <li>
                 <Link
                   href="#about"
-                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors"
+                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors duration-300 ease-editorial"
                 >
                   About
                 </Link>
@@ -37,7 +37,7 @@ export default function PortfolioFooter() {
               <li>
                 <Link
                   href="#contact"
-                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors"
+                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors duration-300 ease-editorial"
                 >
                   Contact
                 </Link>
@@ -45,7 +45,7 @@ export default function PortfolioFooter() {
               <li>
                 <Link
                   href="/work/shutter-studios"
-                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors"
+                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors duration-300 ease-editorial"
                 >
                   Shutter Studios
                 </Link>
@@ -63,7 +63,7 @@ export default function PortfolioFooter() {
                   href="https://instagram.com/jonathanprecious.dev"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors"
+                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors duration-300 ease-editorial"
                 >
                   Instagram
                 </a>
@@ -73,7 +73,7 @@ export default function PortfolioFooter() {
                   href="https://x.com/CodeScientistJ"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors"
+                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors duration-300 ease-editorial"
                 >
                   X
                 </a>
@@ -91,7 +91,7 @@ export default function PortfolioFooter() {
                   href="https://wa.me/2349072913605"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors"
+                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors duration-300 ease-editorial"
                 >
                   WhatsApp
                 </a>
@@ -99,7 +99,7 @@ export default function PortfolioFooter() {
               <li>
                 <a
                   href="mailto:jonathantamunoiduari@gmail.com"
-                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors break-all"
+                  className="text-sm text-[var(--color-pf-cream)] hover:text-[var(--color-pf-orange)] transition-colors duration-300 ease-editorial break-all"
                 >
                   Email
                 </a>

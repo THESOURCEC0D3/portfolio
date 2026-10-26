@@ -27,13 +27,13 @@ export default function PortfolioHero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="#work"
-                className="font-mono text-xs px-7 py-3.5 bg-[var(--color-pf-orange)] text-[var(--color-pf-dark)] rounded-full hover:bg-[var(--color-pf-cream)] transition-colors text-center"
+                className="font-mono text-xs px-7 py-3.5 bg-[var(--color-pf-orange)] text-[var(--color-pf-dark)] rounded-full hover:bg-[var(--color-pf-cream)] transition duration-300 ease-editorial motion-safe:hover:-translate-y-0.5 text-center"
               >
                 See My Work
               </Link>
               <Link
                 href="#contact"
-                className="font-mono text-xs px-7 py-3.5 border border-[var(--color-pf-cream)]/40 text-[var(--color-pf-cream)] rounded-full hover:bg-[var(--color-pf-cream)] hover:text-[var(--color-pf-dark)] transition-colors text-center"
+                className="font-mono text-xs px-7 py-3.5 border border-[var(--color-pf-cream)]/40 text-[var(--color-pf-cream)] rounded-full hover:bg-[var(--color-pf-cream)] hover:text-[var(--color-pf-dark)] transition duration-300 ease-editorial motion-safe:hover:-translate-y-0.5 text-center"
               >
                 Get in Touch
               </Link>
