@@ -24,7 +24,7 @@ export default function ContactCTA() {
             Book a Consultation
           </Link>
           <a
-            href="https://wa.me/2349072913605"
+            href="https://wa.me/2348065429005"
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-xs px-8 py-4 border border-[var(--color-cream)] text-[var(--color-cream)] rounded-full hover:bg-[var(--color-cream)] hover:text-[var(--color-dark)] transition-colors w-full sm:w-auto text-center"

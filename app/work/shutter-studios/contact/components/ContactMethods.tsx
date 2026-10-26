@@ -34,7 +34,7 @@ export default function ContactMethods() {
               The fastest way to reach us. Send a voice note or a few lines about what you're planning, and we'll pick up from there.
             </p>
             <a
-              href="https://wa.me/2349072913605"
+              href="https://wa.me/2348065429005"
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono text-xs text-[var(--color-gold)] border-b border-[var(--color-gold)] pb-1 hover:text-[var(--color-cream)] hover:border-[var(--color-cream)] transition-colors"
