@@ -13,7 +13,7 @@ export default function PortfolioNavigation() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[rgba(10,10,10,0.4)] backdrop-blur-md border-b border-[var(--color-pf-cream)]/5">
+      <header className="pf-intro-fade fixed top-0 left-0 right-0 z-50 bg-[rgba(10,10,10,0.4)] backdrop-blur-md border-b border-[var(--color-pf-cream)]/5">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
           <Link
             href="/"
