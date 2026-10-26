@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import Reveal, { ImageSettle } from "./motion/Reveal";
+import RevealText from "./motion/RevealText";
+import Stagger, { StaggerItem } from "./motion/Stagger";
+import { DIST, DUR } from "./motion/tokens";
 
 type Project = {
   name: string;
@@ -100,47 +104,56 @@ export default function FeaturedWork() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 md:mb-20 max-w-2xl">
-          <p className="font-mono text-xs text-pf-orange mb-6">
-            Selected Work
-          </p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-pf-cream leading-[1.1] tracking-tight">
-            Work I&apos;m <span className="italic">proud</span> to show.
-          </h2>
+          <Reveal y={12}>
+            <p className="font-mono text-xs text-pf-orange mb-6">
+              Selected Work
+            </p>
+          </Reveal>
+          <RevealText
+            segments={["Work I'm", { text: "proud", italic: true }, "to show."]}
+            className="font-serif text-4xl md:text-5xl lg:text-6xl text-pf-cream leading-[1.1] tracking-tight"
+          />
         </div>
 
         <div className="space-y-24 md:space-y-32">
           {projects.map((project) => (
             <div key={project.name} className="group">
-              <ProjectLink
-                href={project.href}
-                className="block relative rounded-xl overflow-hidden border border-pf-cream/10 bg-pf-dark-elevated transition-colors duration-700 ease-editorial hover:border-pf-cream/25"
-              >
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-pf-cream/10">
-                  <span className="w-3 h-3 rounded-full bg-pf-cream/20" />
-                  <span className="w-3 h-3 rounded-full bg-pf-cream/20" />
-                  <span className="w-3 h-3 rounded-full bg-pf-cream/20" />
-                  <span className="font-mono text-[10px] text-pf-muted ml-4">
-                    {project.displayUrl}
-                  </span>
-                </div>
+              <Reveal y={DIST.lg} duration={DUR.slow}>
+                <ProjectLink
+                  href={project.href}
+                  className="block relative rounded-xl overflow-hidden border border-pf-cream/10 bg-pf-dark-elevated transition-colors duration-700 ease-editorial hover:border-pf-cream/25"
+                >
+                  <div className="flex items-center gap-2 px-4 py-3 border-b border-pf-cream/10">
+                    <span className="w-3 h-3 rounded-full bg-pf-cream/20" />
+                    <span className="w-3 h-3 rounded-full bg-pf-cream/20" />
+                    <span className="w-3 h-3 rounded-full bg-pf-cream/20" />
+                    <span className="font-mono text-[10px] text-pf-muted ml-4">
+                      {project.displayUrl}
+                    </span>
+                  </div>
 
-                <div className="relative aspect-16/10 w-full overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.alt}
-                    fill
-                    className={`${
-                      project.imageFit === "cover"
-                        ? "object-cover object-top"
-                        : "object-contain"
-                    } motion-safe:group-hover:scale-[1.02] transition-transform duration-700 ease-editorial`}
-                    sizes="100vw"
-                  />
-                </div>
-              </ProjectLink>
+                  <div className="relative aspect-16/10 w-full overflow-hidden">
+                    {/* The settle (scroll) and the hover zoom sit on
+                        different elements so they never fight */}
+                    <ImageSettle>
+                      <Image
+                        src={project.image}
+                        alt={project.alt}
+                        fill
+                        className={`${
+                          project.imageFit === "cover"
+                            ? "object-cover object-top"
+                            : "object-contain"
+                        } motion-safe:group-hover:scale-[1.02] transition-transform duration-700 ease-editorial`}
+                        sizes="100vw"
+                      />
+                    </ImageSettle>
+                  </div>
+                </ProjectLink>
+              </Reveal>
 
-              <div className="grid md:grid-cols-3 gap-8 md:gap-12 mt-10">
-                <div className="md:col-span-2">
+              <Stagger className="grid md:grid-cols-3 gap-8 md:gap-12 mt-10">
+                <StaggerItem className="md:col-span-2">
                   <h3 className="font-serif text-2xl md:text-3xl text-pf-cream mb-4">
                     {project.name}
                   </h3>
@@ -156,9 +169,9 @@ export default function FeaturedWork() {
                       →
                     </span>
                   </ProjectLink>
-                </div>
+                </StaggerItem>
 
-                <div>
+                <StaggerItem>
                   <p className="font-mono text-xs text-pf-muted mb-4">
                     Built with
                   </p>
@@ -172,8 +185,8 @@ export default function FeaturedWork() {
                       </li>
                     ))}
                   </ul>
-                </div>
-              </div>
+                </StaggerItem>
+              </Stagger>
             </div>
           ))}
         </div>

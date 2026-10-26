@@ -34,6 +34,30 @@ export default function Reveal({
   );
 }
 
+// Fills its (positioned) parent and eases an image from slightly zoomed in
+// to its resting size as it scrolls into view. Scale only: the image is
+// never hidden.
+export function ImageSettle({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <m.div
+      data-reveal
+      className={`absolute inset-0 ${className ?? ""}`}
+      initial={{ scale: 1.08 }}
+      whileInView={{ scale: 1 }}
+      viewport={VIEWPORT}
+      transition={{ duration: DUR.slower, ease: EASE }}
+    >
+      {children}
+    </m.div>
+  );
+}
+
 // Block-level mask: the child rises up from behind an invisible edge.
 // Used for single large words where inline masks would stop text wrapping.
 // The visible mask is what gets watched, not the child: the child starts
